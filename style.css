@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    margin: 0 3%;
+}
+header .logo {
+    width: 100px;
+    margin-right: 50px;
+}
+header h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #727272;
+}
+.line_field {
+    height: 55vh;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    border-top: 1px solid rgb(202, 202, 202);
+}
+.line_field div.item ul{
+    display: flex;
+    flex-direction: column;
+}
+.line_field div.item ul li {
+    height: calc(55vh / 4);
+    list-style-type: none;
+    position: relative;
+}
+.line_field div.item ul li {
+    border-bottom: 1px solid rgb(202, 202, 202);
+}
+.line_field div.item ul li:last-of-type {
+    border-bottom: none;
+}
+.line_field div {
+    border-right: 1px solid rgb(202, 202, 202);
+}
+.line_field div:last-of-type {
+    border-right: none;
+}
+.line_field .field_area {
+    background-image: url(./images/bg.png);
+    background-size: 650px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.field_area input {
+    border: none;
+}
+
+.item_field {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 35vh;
+}
+.item_field .item {
+    position: relative;
+    width: calc(100% / 8);
+    border: 1px solid rgb(202, 202, 202);
+}
+
+.drag-and-drop {
+    cursor: move;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 90%;
+}
+.drag-and-drop img {
+    width: 100%;
+    height: 100%;
+}
+.drag-and-drop.drag {
+    animation: furufuru .5s  infinite;
+}
+@keyframes furufuru {
+    0% {transform: translate(0px, 0px) rotateZ(0deg)}
+    25% {transform: translate(0px, 0px) rotateZ(20deg)}
+    75% {transform: translate(0px, 0px) rotateZ(-20deg)}
+    100% {transform: translate(0px, 0px) rotateZ(0deg)}
+  }
+
+.drag {
+    z-index: 1001;
+}
